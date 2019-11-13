@@ -1,0 +1,19 @@
+_export:
+  plugin:
+    repositories:
+      - https://jitpack.io
+    dependencies:
+      - com.github.supimen:digdag-plugin-glue:0.1-SNAPSHOT
+  region: ap-northeast-1
+
++crawler:
+  glue.start_crawler>:
+  crawler_name: sample-crawler
+
++job_run:
+  glue.start_job_run>:
+  job_name: sample-job-run
+  arguments:
+    --param1: "value1"
+    --param2: "value2"
+  max_capacity: 10
