@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/supimen/digdag-plugin-glue/tree/master.svg?style=svg)](https://circleci.com/gh/supimen/digdag-plugin-glue/tree/master)
+
 # digdag-plugin-glue
 
 # Overview
