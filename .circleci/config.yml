@@ -1,0 +1,26 @@
+version: 2
+
+references:
+  environment: &environment
+    docker:
+      - image: circleci/openjdk:8-jdk
+    working_directory: ~/repo
+    environment:
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
+
+jobs:
+
+  build:
+    <<: *environment
+    steps:
+      - checkout
+      - run: sbt compile
+
+workflows:
+  version: 2
+
+  merge-before:
+    jobs:
+      - build
+
