@@ -32,9 +32,25 @@ _export:
 See [examples](./example/example.dig)
 
 # Common Configuration
-### Secrets
-- glue.access_key_id: AWS access key ID (required)
-- glue.secret_access_key_id: AWS Secret Access Key (required)
+### System Options
+- auth_method: name of mechanism to authenticate requests (basic, env, instance, profile, or properties. default: basic)
+- "basic": uses the following secrets values to authenticate.
+    - glue.access_key_id: AWS access key ID (string, required)
+    - glue.secret_access_key_id: AWS secret access key (string, required)
+- "env": uses AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY) environment variables.
+- "instance": uses EC2 instance profile.
+- "profile": uses credentials written in a file. Format of the file is as following, where [...] is a name of profile.
+    - profile_file: path to a profiles file. (string, default: given by AWS_CREDENTIAL_PROFILES_FILE environment varialbe, or ~/.aws/credentials).
+    - profile_name: name of a profile. (string, default: "default")
+        ```
+        [default]
+        aws_access_key_id=YOUR_ACCESS_KEY_ID
+        aws_secret_access_key=YOUR_SECRET_ACCESS_KEY
+
+        [profile2]
+        ...
+        ```
+- "properties": uses aws.accessKeyId and aws.secretKey Java system properties.
 
 ### Options
 - region: The AWS region to use for Glue. (string, optional)
