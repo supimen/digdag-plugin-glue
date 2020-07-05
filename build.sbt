@@ -1,10 +1,10 @@
 name := "digdag-plugin-glue"
 organization := "supimen.digdag.plugin"
 organizationName := "supimen"
-version := "0.1.0"
+version := "0.1.1"
 scalaVersion := "2.13.1"
 resolvers ++= Seq(Resolver.bintrayRepo("digdag", "maven"))
-val digdagVersion = "0.9.39"
+val digdagVersion = "0.9.42"
 
 val digdagDependencies = Seq(
   "io.digdag"                       % "digdag-spi"                     % digdagVersion % Provided,
