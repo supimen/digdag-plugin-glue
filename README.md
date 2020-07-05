@@ -13,7 +13,7 @@ _export:
     repositories:
       - https://jitpack.io
     dependencies:
-      - com.github.supimen:digdag-plugin-glue:0.1.0
+      - com.github.supimen:digdag-plugin-glue:0.1.1
   region: ap-northeast-1
 
 +crawler:
