@@ -2,16 +2,12 @@ package supimen.digdag.plugin.operator
 
 import com.amazonaws.auth.profile.{ProfileCredentialsProvider, ProfilesConfigFile}
 import com.amazonaws.auth.{
-  AWSCredentials,
   AWSCredentialsProvider,
   AWSStaticCredentialsProvider,
-  AnonymousAWSCredentials,
   BasicAWSCredentials,
-  BasicSessionCredentials,
   EC2ContainerCredentialsProviderWrapper,
   EnvironmentVariableCredentialsProvider,
-  SystemPropertiesCredentialsProvider,
-  WebIdentityTokenCredentialsProvider
+  SystemPropertiesCredentialsProvider
 }
 import com.amazonaws.regions.Regions
 import com.amazonaws.services.glue.{AWSGlue, AWSGlueClientBuilder}
